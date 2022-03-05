@@ -1,10 +1,5 @@
 <div id="top"></div>
 
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -31,8 +26,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -86,7 +79,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [Pietro Masolini](https://www.linkedin.com/in/pietro-m-99b7b318a/)
+Linkedin - [Pietro Masolini](https://www.linkedin.com/in/pietro-m-99b7b318a/)
 
 Project Link: [https://github.com/roccobalocco/myapp](https://github.com/roccobalocco/myapp)
 

@@ -5,8 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var fs = require('fs')
-var http = require('http')
-var url = require('url')
+var myUtil = require('./public/javascripts/util.js')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -33,9 +32,21 @@ app.use(function(req, res, next) {
   if (req.url == "/homepage"){
     console.log("caricamento homepage url --> " + req.url)
     res.writeHead(200, {"Content-Type": "text/html"})
-    res.write(fs.readFileSync(path.join(__dirname, '/Project/index.html')))
+    res.write(fs.readFileSync(path.join(__dirname, '/public/index.html')))
     res.end()
-  } else {
+  }else if(req.url == "/retrieve"){
+    console.log("caricamento retrieve url --> " + req.url)
+    let mongoClient = myUtil.mongo_connection();
+    if(mongoClient == "Fallita"){
+      console.log("Connessione fallita"); 
+    }else{ 
+      console.log("Connessione riuscita"); 
+    }
+
+    myUtil.retrieve_zone(mongoClient, "Chiavenna")
+    
+    res.end()
+  }else {
     console.log("errore in url, url --> " + req.url)
     next(createError(404))
     res.end()
@@ -55,25 +66,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-
-//mongodb connnection:
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://pietro:pietro@cluster0.hcj4x.mongodb.net/Feedbacks?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-client.connect(err => {
-  if(err){
-    console.log("connection is down with mongodb")
-  }else{
-    const collection = client.db("Feedbacks").collection("UserOpinion");
-    console.log("connection is up with mongodb")
-    collection.find({username: "Pietro"}).toArray(function(err, result){
-      if(!err){
-        console.log(result);
-        client.close();
-      }else{
-        console.log(err)
-      }
-    })
-  }
-});

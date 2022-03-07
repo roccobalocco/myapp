@@ -18,7 +18,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#riconoscimenti">Riconoscimenti</a></li>
+    <li><a href="#acknowledgements">Riconoscimenti</a></li>
   </ol>
 </details>
 
@@ -46,10 +46,9 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Node.js]()
-* [MongoDB]()
-* [CSS3]()
-* [HTML5]()
+* [Node.js](https://nodejs.org/en/)
+* [MongoDB](https://www.mongodb.com/)
+* [Express](http://expressjs.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -80,6 +79,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contact
 
 Linkedin - [Pietro Masolini](https://www.linkedin.com/in/pietro-m-99b7b318a/)
+Instagram - [@pietromasolini_1ne](https://www.instagram.com/pietromasolini_1ne/)
 
 Project Link: [https://github.com/roccobalocco/myapp](https://github.com/roccobalocco/myapp)
 
@@ -88,9 +88,9 @@ Project Link: [https://github.com/roccobalocco/myapp](https://github.com/roccoba
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Riconoscimenti
+## Acknowledgements
 
-Risorse che ho trovato utili durante lo sviluppo del progetto:
+Resources that I found usefull during the development:
 * [From image to map-image in HTML website](http://www.image-map.net/)
 * [Free infos about everything that works on web](https://www.w3schools.com)
 

@@ -18,7 +18,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#riconoscimenti">Riconoscimenti</a></li>
   </ol>
 </details>
 
@@ -88,11 +88,10 @@ Project Link: [https://github.com/roccobalocco/myapp](https://github.com/roccoba
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Riconoscimenti
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [From image to map-image in HTML website]()
+Risorse che ho trovato utili durante lo sviluppo del progetto:
+* [From image to map-image in HTML website](http://www.image-map.net/)
 * [Free infos about everything that works on web](https://www.w3schools.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>

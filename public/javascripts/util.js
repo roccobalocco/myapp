@@ -5,16 +5,17 @@ module.exports.mongo_connection = function (){
     return client
 }
 
-module.exports.retrieve_zone = function (client, zone){
+module.exports.retrieve_zone = function (client, zone, res, req){
     client.connect(err => {
         if (err) throw err;
         client.db("Feedbacks").collection("UserOpinion").find({ tratto: zone }).toArray( function(err, result) {
           if (err){
             console.log("Retrieve Fallita, " + err)
           }else{
-            console.log("Retrieve Riuscita")
+            console.log("Retrieve Riuscita" + result)
           }
           client.close()
+          res.end()
         })
     })
 }

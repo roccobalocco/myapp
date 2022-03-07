@@ -48,10 +48,9 @@ app.use(function(req, res, next) {
       console.log("Connessione riuscita"); 
     }
 
-    myUtil.retrieve_zone(mongoClient, req.query.z)
+    myUtil.retrieve_zone(mongoClient, req.query.z, res, req)
     
     console.log("esco")
-    res.end()
   }else {
     console.log("errore in url, url --> " + req.url)
     next(createError(404))

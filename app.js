@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var fs = require('fs')
 var myUtil = require('./public/javascripts/util.js')
+var ejs = require('ejs') //to comunicate from server to client with variables
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -34,8 +35,11 @@ app.use(function(req, res, next) {
     //res.writeHead(200, {"Content-Type": "text/html"})
     res.write(fs.readFileSync(path.join(__dirname, '/public/html/index.html')))
     res.end()
-  }else if(req.url == "/retrieve"){
-    console.log("caricamento retrieve url --> " + req.url)
+  }else if(req.url.search(/zone/) != -1){
+    console.log("siamo in una zona, piu' precisamente --> " + req.url.replace("/zone/", ""))
+    
+    var zona =  ejs.render("string", {zona: req.url.replace("/zone/", "")})
+    
     let mongoClient = myUtil.mongo_connection();
     if(mongoClient == "Fallita"){
       console.log("Connessione fallita"); 
@@ -43,8 +47,9 @@ app.use(function(req, res, next) {
       console.log("Connessione riuscita"); 
     }
 
-    myUtil.retrieve_zone(mongoClient, "Chiavenna")
+    myUtil.retrieve_zone(mongoClient, zona)
     
+    console.log("esco")
     res.end()
   }else {
     console.log("errore in url, url --> " + req.url)

@@ -8,18 +8,29 @@ module.exports.mongo_connection = function (){
 module.exports.retrieve_zone = function (client, zone){
     client.connect(err => {
         if (err) throw err;
-        var dbo = client.db("Feedbacks");
-        dbo.collection("UserOpinion").find({ tratto: zone }).toArray( function(err, result) {
+        client.db("Feedbacks").collection("UserOpinion").find({ tratto: zone }).toArray( function(err, result) {
           if (err){
-            console.log("Retrieve Fallita")
+            console.log("Retrieve Fallita, " + err)
           }else{
             console.log(result)
           }
+          client.close()
         })
-        this.close_mongo_connection(client)
     })
 }
 
 module.exports.close_mongo_connection = function (client){
     client.close();
+}
+
+function getDataByZone(zone){
+  let data = ""
+
+  return data;
+}
+
+function getFormByZone(zone){
+  let form = ""
+  
+  return form
 }

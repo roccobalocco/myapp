@@ -7,13 +7,7 @@
         <meta name="author" content="Piemme">
         <meta name="keyword" content="Ciclabili Bici Ciclabile Valchiavenna Chiavenna">
         <link rel="stylesheet" type="text/css" href="stylesheets/master.css" />
-        <script>
-            var saturation = 0
-            function sat(v){    
-                document.getElementById("mappa").setAttribute("style", `filter:saturate(${v});`)           
-                saturation = v
-            }
-        </script>
+        <script src="javascripts/util.js"></script>
     </head>
     <body>
         <!-- hamburger -->
@@ -51,14 +45,9 @@
                         Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
                 </div>
                 <div id="formContainer">
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                        Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                        Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                        Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                        Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                        Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.
-                        Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>    
-                        <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
+                    <form action="sendData();" name="sendComments">
+                        
+                    </form>
                 </div>
             </div>
             <div id="asideContainer">
@@ -87,5 +76,12 @@
                 Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
                 Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
         </footer>
+        <script>
+            //to create the form and retrieve datas dynamically
+            window.onload(() => {
+                let dataHTML = getDataByZone(zona)
+                let formHTML = getFormByZone(zona)
+            })
+        </script>
     </body>
 </html>

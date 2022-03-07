@@ -31,8 +31,8 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   if (req.url == "/homepage"){
     console.log("caricamento homepage url --> " + req.url)
-    res.writeHead(200, {"Content-Type": "text/html"})
-    res.write(fs.readFileSync(path.join(__dirname, '/public/index.html')))
+    //res.writeHead(200, {"Content-Type": "text/html"})
+    res.write(fs.readFileSync(path.join(__dirname, '/public/html/index.html')))
     res.end()
   }else if(req.url == "/retrieve"){
     console.log("caricamento retrieve url --> " + req.url)

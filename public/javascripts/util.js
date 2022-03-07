@@ -12,7 +12,7 @@ module.exports.retrieve_zone = function (client, zone){
           if (err){
             console.log("Retrieve Fallita, " + err)
           }else{
-            console.log(result)
+            console.log("Retrieve Riuscita")
           }
           client.close()
         })
@@ -21,6 +21,13 @@ module.exports.retrieve_zone = function (client, zone){
 
 module.exports.close_mongo_connection = function (client){
     client.close();
+}
+
+function getWebPageByZone(zone, result){
+  let page = ""
+  
+
+  return page
 }
 
 function getDataByZone(zone){

@@ -27,12 +27,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The Project is focused on showing my abilities with node.js and the language that rotate around him.
+The body of the project is on the bicycle road between Colico and Chiavenna (my town).
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+The Project has:
+* A HomePage that shows to the user the road, with a javascript saturation filter to fill the image and the image itself is clickable
+* Various page for the small town that the road hit with comments and the possibility of leave a comment
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 

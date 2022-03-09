@@ -11,11 +11,11 @@ module.exports.retrieve_zone = function (client, zone, res, req){
         client.db("Feedbacks").collection("UserOpinion").find({ tratto: zone }).toArray( function(err, result) {
           if (err){
             console.log("Retrieve Fallita, " + err)
+            return "Fallita"
           }else{
             console.log("Retrieve Riuscita" + result)
+            return result
           }
-          client.close()
-          res.end()
         })
     })
 }

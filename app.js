@@ -4,14 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var bodyParser = require('body-parser');
 var fs = require('fs')
-var myUtil = require('./public/javascripts/util.js')
+var dbUtil = require('./public/javascripts/db');
+var retrieved = false;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const { EventEmitter } = require('stream');
+var { EventEmitter } = require('stream');
+
+//dbUtil.retrieve();
 
 var app = express();
+    
+//bodyparser init
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -23,41 +31,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use('/zone', usersRouter) 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 //handler for any request
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  if(!retrieved){
+    dbUtil.retrieve();
+    retrieved = true;
+  }
   if (req.url == "/homepage"){
     console.log("caricamento homepage url --> " + req.url)
     res.writeHead(200, {"Content-Type": "text/html"})
     res.write(fs.readFileSync(path.join(__dirname, '/public/html/index.html')))
     res.end()
-  }else if(req.url.search(/zone/) != -1){
-    //url?attributo=valore
-    console.log("siamo in una zona, piu' precisamente --> " + req.query.z)
-    
+  }/*else if(req.url.search(/zone/)){
     res.writeHead(200, {"Content-Type": "text/html"})
-    res.write(fs.readFileSync(path.join(__dirname, '/public/html/zona.html')))
-
-    let mongoClient = myUtil.mongo_connection();
-    if(mongoClient == "Fallita"){
-      console.log("Connessione fallita"); 
-    }else{ 
-      console.log("Connessione riuscita"); 
-    }
-
-    myUtil.retrieve_zone(mongoClient, req.query.z, res, req)
-    
-    console.log("esco")
-  }else {
+    res.write(fs.readFileSync('public/html/zona.html'))
+    res.end()
+  }*/else{
     console.log("errore in url, url --> " + req.url)
     next(createError(404))
     res.end()
   }
 });
-
 
 // error handler
 app.use(function(err, req, res, next) {

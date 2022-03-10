@@ -7,6 +7,7 @@
         <meta name="author" content="Piemme">
         <meta name="keyword" content="Ciclabili Bici Ciclabile Valchiavenna Chiavenna">
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+        <script src="../javascripts/util.js"></script>
         <script>
             var saturation = 0
             function sat(v){    
@@ -53,13 +54,13 @@
                     <img id="mappa" src="images/chiavenna_colico.jpg" usemap="#image-map" class="image" 
                     title="Ciclabile della Valchiavenna, photo by https://www.valtellina.it/it/bike/cicloturismo/percorsi/ciclabile-valchiavenna"
                     alt="Ciclabile della Valchiavenna, photo by https://www.valtellina.it/it/bike/cicloturismo/percorsi/ciclabile-valchiavenna">
-                    <map name="image-map">
-                        <area class="mapLink" alt="Chiavenna" title="Chiavenna" href="./zone?z=Chiavenna" coords="153,103,418,191" shape="rect">
-                        <area class="mapLink" alt="Prosto-Villa" title="Prosto-Villa" href="./zone?z=Prosto_Villa" coords="418,85,610,195" shape="rect">
-                        <area class="mapLink" alt="Mese-Gordona" title="Mese-Gordona" href="./zone?z=Mese_Gordona" coords="194,190,464,258" shape="rect">
-                        <area class="mapLink" alt="Samolaco" title="Samolaco" href="./zone?z=Samolaco" coords="133,257,564,324" shape="rect">
-                        <area class="mapLink" alt="Novate-Verceia" title="Novate-Verceia" href="./zone?z=Novate_Verceia" coords="320,325,537,439" shape="rect">
-                        <area class="mapLink" alt="Dubino-Colico" title="Dubino-Colico" href="./zone?z=Dubino_Colico" coords="218,442,464,611" shape="rect">
+                    <map name="image-map" id="image-map">
+                        <area class="mapLink" alt="Chiavenna" title="Chiavenna" href="./zone?z=Chiavenna" shape="rect">
+                        <area class="mapLink" alt="Prosto-Villa" title="Prosto-Villa" href="./zone?z=Prosto_Villa" shape="rect">
+                        <area class="mapLink" alt="Mese-Gordona" title="Mese-Gordona" href="./zone?z=Mese_Gordona" shape="rect">
+                        <area class="mapLink" alt="Samolaco" title="Samolaco" href="./zone?z=Samolaco" shape="rect">
+                        <area class="mapLink" alt="Novate-Verceia" title="Novate-Verceia" href="./zone?z=Novate_Verceia" shape="rect">
+                        <area class="mapLink" alt="Dubino-Colico" title="Dubino-Colico" href="./zone?z=Dubino_Colico" shape="rect">
                     </map>
                 </div>
                 <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
@@ -115,6 +116,17 @@
                     }
                 }
             }, 20000);
+
+            //dynamically resize the coordinate of the image-map :)
+            window.onload = function(){
+                let img = document.getElementById("mappa");
+                get_offset(img.width, img.height, document.getElementById("image-map").children) 
+            }
+
+            window.onresize = function(){
+                let img = document.getElementById("mappa");
+                get_offset(img.width, img.height, document.getElementById("image-map").children) 
+            }
         </script>
     </body>
 </html>

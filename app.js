@@ -13,8 +13,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var { EventEmitter } = require('stream');
 
-//dbUtil.retrieve();
-
 var app = express();
     
 //bodyparser init

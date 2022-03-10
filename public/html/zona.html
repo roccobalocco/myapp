@@ -7,6 +7,8 @@
         <meta name="author" content="Piemme">
         <meta name="keyword" content="Ciclabili Bici Ciclabile Valchiavenna Chiavenna">
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+        <script type="text/javascript" src="../javascripts/util.js"></script>
+
     </head>
     <body>
         <!-- hamburger -->
@@ -17,10 +19,10 @@
         <div id="background">&nbsp;</div>
         <nav id="nav">
             <ul id="list">
-              <li class="item"> <a href="http://localhost:3000/homepage"> Home </a> </li>
-              <li class="item"> <a href=#> Piste </a> </li>
-              <li class="item"> <a href=#> Territorio </a> </li>
-              <li class="item"> <a href=#> Info </a> </li>
+              <li class="item"> <a href="./homepage"> Home </a> </li>
+              <li class="item"> <a href="./piste"> Piste </a> </li>
+              <li class="item"> <a href="./territorio"> Territorio </a> </li>
+              <li class="item"> <a href="./info"> Info </a> </li>
             </ul>
         </nav>
         
@@ -34,13 +36,20 @@
         </header>
         <div id="container">
             <div id="contenuto">
+                <div id="headerContainer"></div>
                 <div id="dataContainer">
-                    
+                    <table id="tableContainer">
+                        <tr><th>UserName</th><th>Tratto</th><th>Opinione</th></tr>
+                    </table>
+                    <br>
                 </div>
                 <div id="formContainer">
-                    <form action="sendData();" name="sendComments">
-                        
-                    </form>
+                    <fieldset>
+                        <legend>La tua opinione:</legend>
+                        <form id="sendComments">
+                            
+                        </form>
+                    </fieldset>
                 </div>
             </div>
             <div id="asideContainer">
@@ -70,5 +79,12 @@
                 Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
                 Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
         </footer>
+        <script>
+            var zona = get_zone_from_url()
+            get_header(zona, document.getElementById("headerContainer"))
+            get_data('../json/comments.json', zona, document.getElementById("tableContainer"))
+            get_form(zona, document.getElementById("sendComments"))
+            
+        </script>
     </body>
 </html>

@@ -1,9 +1,34 @@
+table{
+    margin-right: auto;
+    margin-left: auto;
+    float: center;
+    min-width: 95%;
+}
+
+td{
+    text-align: center;
+}
+
+fieldset{
+    border-radius: 15px 50px 30px;
+}
+
+form{
+    margin: 5px 20px 5px 20px;
+}
+
+textarea{
+    width:95%;
+    resize: vertical;
+}
+
 /*Smart-phone*/
 @media only screen and (min-width: 320px){
 
     body {
         background-image: linear-gradient(to bottom, #1271ec, rgb(19, 108, 224),rgb(11, 94, 202), #29ad08);
         font: 16px arial helvetica sans-serif;
+        width: 100%;
     }
 
     #container {
@@ -255,6 +280,7 @@
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
         position: absolute;
+        width: 100%;
         font: 18px arial helvetica sans-serif;
     }
 

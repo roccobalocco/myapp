@@ -32,13 +32,11 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/zone', usersRouter) 
 app.use('/', indexRouter);
 
+dbUtil.retrieve();
+
 //handler for any request
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  if(!retrieved){
-    dbUtil.retrieve();
-    retrieved = true;
-  }
   if (req.url == "/homepage"){
     console.log("caricamento homepage url --> " + req.url)
     res.writeHead(200, {"Content-Type": "text/html"})

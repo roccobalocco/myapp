@@ -23,9 +23,9 @@ function get_zone_from_url(){
   return url.searchParams.get("z");
 }
 
-function send_datas(zona, container){
-  
-  alert("CIAOOOO")
+function send_datas(zona, nome, opinione){
+  //dovresti reindirizzare la pagina alla route corrispondente con url con username, tratto e opinione con - al posto degli spazi
+  window.location.href = window.location.toString().concat(`/send_data?u=${nome.value}&o=${opinione.value}&z=${zona}`).replace("?z=".concat(zona), "");
 }
 
 function get_header(zona, container){
@@ -41,18 +41,15 @@ function get_form(zona, container){
   var textIn = document.createElement('input')
   textIn.type = "text";
   textIn.placeholder = "Il tuo Username..."
-  textIn.name = "nome"
+  textIn.id = "nome"
   var textAr = document.createElement('textarea')
   textAr.placeholder = "La tua opinione..."
-  textAr.name = "opinione"
+  textAr.id = "opinione"
   textAr.rows = "10"
   var submitBut = document.createElement('input')
   submitBut.type = "button"
-  submitBut.name = "manda"
   submitBut.value = "Invia"
-  submitBut.addEventListener('click', function(){
-    send_datas(zona, document.getElementById("sendComments"))
-  })
+  submitBut.onclick = function () { send_datas(zona, document.getElementById("nome"), document.getElementById("opinione")); };
   container.appendChild(par1)
   container.appendChild(document.createElement('br'))
   container.appendChild(textIn)
@@ -63,6 +60,7 @@ function get_form(zona, container){
   container.appendChild(document.createElement('br'))
   container.appendChild(document.createElement('br'))
   container.appendChild(submitBut)
+  container.appendChild(document.createElement('h6').appendChild(document.createTextNode(" [Il caricamento non e' immediato]")))
 }
 
 function get_data(path, zona, container){

@@ -1,3 +1,8 @@
+body{
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;  
+}
+
 table{
     margin-right: auto;
     margin-left: auto;
@@ -26,8 +31,7 @@ textarea{
 @media only screen and (min-width: 320px){
 
     body {
-        background-image: linear-gradient(to bottom, #1271ec, rgb(19, 108, 224),rgb(11, 94, 202), #29ad08);
-        font: 16px arial helvetica sans-serif;
+        background-image: linear-gradient(to bottom, rgb(7, 138, 109), rgb(7, 138, 109), rgb(7, 138, 83), #00aa13);
         width: 100%;
     }
 
@@ -42,10 +46,14 @@ textarea{
         border-radius: 15px 50px 30px;
         position: relative;
         padding: 10px 20px 10px 20px;
-        background: rgba(3, 101, 230, 0.75);
+        background: rgba(0, 168, 132, 0.90);
         width: 85%;
         float: center;
         margin-bottom: 20px;
+    }
+
+    .logo{
+        height: 150px;
     }
 
     .image-container {
@@ -65,7 +73,7 @@ textarea{
         padding: 10px 20px 10px 20px;
         border-radius: 15px 50px 30px;
         text-align: center;
-        background: rgba(37, 148, 212, 0.75);
+        background: rgba(0, 168, 132, 0.90);
         width: 85%;
         float: center;
     }
@@ -73,7 +81,7 @@ textarea{
     .asideElem {
         border-radius: 15px 50px 30px;
         padding: 5px 10px 5px 10px;
-        background: rgba(3, 101, 230, 0.75);
+        background: rgba(7, 138, 109, 0.95);
         margin: 12px 12px 12px 12px;
         display:block;
     }
@@ -84,7 +92,7 @@ textarea{
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        background: rgb(41, 173, 8);
+        background: rgba(0, 170, 19, 0.7);
         width: 92%;
         float: center;
         height: 100px;
@@ -160,10 +168,9 @@ textarea{
         text-align: center;
         width: 100%;
     }
-    
-    .item {
-        margin: 1rem;
-        font-size: 36px;
+
+    .link {
+        text-decoration: none;
     }
     
     .link:link,
@@ -172,16 +179,9 @@ textarea{
         font-size: 3rem;
         font-weight: 300;
         padding: 1rem 2rem;
-        color: white;
+        color: black;
         text-decoration: none;
-        text-transform: uppercase;
-        background-image: linear-gradient(
-            120deg,
-            transparent 0%,
-            transparent 50%,
-            white 50%
-        );
-        background-size: 220%;
+        text-transform: capitalize;
         transition: all 0.4s;
     }
 
@@ -272,25 +272,23 @@ textarea{
 }
 
 /*Personal-computer*/
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 950){
 
     body {
         background-image: url("../images/mountain2.jpg");
-        background-color: #29ad08;
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
-        position: absolute;
-        width: 100%;
-        font: 18px arial helvetica sans-serif;
+        background-color: #00aa13;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
     }
 
     navbar {
-        border-radius: 15px 15px 50px 50px;
+        border-radius: 15px 15px 45px 45px;
         position: relative;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        background: rgba(41, 173, 8, 0.75);
+        background: rgba(41, 173, 8, 0.70);
         width: 85%;
         float: center;
         height: 100px;
@@ -299,13 +297,20 @@ textarea{
         padding-left: 20px;
         align-items: center;
     }
-
-    a {
-        position: relative;
-        top: 33%;
-        margin: 10 10 10 10; 
+    
+    .logo{
+        padding-left: 10px;
+        height: 95px;
     }
 
+    a {
+        text-decoration: none;
+        position: relative;
+        top: 33%;
+        margin: 10 10 10 10;
+        color: black; 
+    }
+    
     .menuItem {
         width: 150px;
         padding-right: 10px;
@@ -315,9 +320,74 @@ textarea{
     }
 
     .menuItem:hover{
-        border-radius: 5%;
+        border-radius: 0px 0px 15px 15px;
         background-color: rgba(34, 112, 15, 0.75);
     }
+
+    
+
+    /*INIZIO BOTTONE PROVA*/
+    
+    navbar a{
+        top: 33%;
+        font-weight:500;
+        text-transform:uppercase;
+        text-decoration:none;
+        color:#16151b;
+        margin:0 15px;
+        font-size:16px;
+        letter-spacing:1px;
+        position:relative;
+        margin: 10 10 10 10;
+    }
+    navbar a:before{
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background:#16151b;
+        top:47%;
+        animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+    navbar a:hover:before{
+        animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    }
+    @keyframes in{
+        0%{
+            width: 0;
+            left:0;
+            right:auto;
+        }
+        100%{
+            left:0;
+            right:auto;
+            width: 100%;
+        }
+    }
+    @keyframes out{
+        0%{
+            width:100%;
+            left: auto;
+            right: 0;
+        }
+        100%{
+            width: 0;
+            left: auto;
+            right: 0;
+        }
+    }
+    @keyframes show{
+        0%{
+            opacity:0;
+            transform:translateY(-10px);
+        }
+        100%{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+    
+    /* FINE BOTTONE PROVA*/
 
     #container {
         position: relative;
@@ -330,7 +400,7 @@ textarea{
         border-radius: 15px 50px 30px;
         position: relative;
         padding: 10px 20px 10px 20px;
-        background: rgba(3, 101, 230, 0.75);
+        background:  rgba(7, 138, 109, 0.95) /*rgba(3, 101, 230, 0.75)*/;
         width: 65%;
         float: left;
         margin-bottom: 20px;
@@ -356,7 +426,7 @@ textarea{
     #asideContainer {
         border-radius: 50px 15px 50px 30px;
         text-align: center;
-        background: rgba(37, 148, 212, 0.75);
+        background: rgba(0, 168, 132, 0.90)/*rgba(37, 148, 212, 0.75)*/;
         width: 25%;
         float: right;
     }
@@ -364,18 +434,18 @@ textarea{
     .asideElem {
         border-radius: 50px 15px 50px 30px;
         padding: 5px 10px 5px 10px;
-        background: rgba(3, 101, 230, 0.75);
+        background: rgba(7, 138, 109, 0.95);/*rgba(3, 101, 230, 0.75);*/
         margin: 12px 12px 12px 12px;
         display:block;
     }
 
-    footer {
-        border-radius: 50px 50px 15px 15px;
+    footer {        
+        border-radius: 45px 45px 15px 15px;
         position: relative;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        background: rgb(41, 173, 8);
+        background: rgba(0, 170, 19, 0.7);
         width: 85%;
         float: center;
         height: 100px;

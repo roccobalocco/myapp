@@ -42,11 +42,22 @@ app.use(function(req, res, next) {
     res.writeHead(200, {"Content-Type": "text/html"})
     res.write(fs.readFileSync(path.join(__dirname, '/public/html/index.html')))
     res.end()
-  }/*else if(req.url.search(/zone/)){
+  }else if(req.url == "/piste"){
+    console.log("caricamento piste url --> " + req.url)
     res.writeHead(200, {"Content-Type": "text/html"})
-    res.write(fs.readFileSync('public/html/zona.html'))
+    res.write(fs.readFileSync(path.join(__dirname, '/public/html/piste.html')))
     res.end()
-  }*/else{
+  }else if(req.url == "/territorio"){
+    console.log("caricamento territorio url --> " + req.url)
+    res.writeHead(200, {"Content-Type": "text/html"})
+    res.write(fs.readFileSync(path.join(__dirname, '/public/html/territorio.html')))
+    res.end()
+  }else if(req.url == "/info"){
+    console.log("caricamento info url --> " + req.url)
+    res.writeHead(200, {"Content-Type": "text/html"})
+    res.write(fs.readFileSync(path.join(__dirname, '/public/html/info.html')))
+    res.end()
+  }else{
     console.log("errore in url, url --> " + req.url)
     next(createError(404))
     res.end()

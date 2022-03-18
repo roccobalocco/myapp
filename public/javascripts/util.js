@@ -3,7 +3,7 @@ var z = "";
 function get_offset(actualW, actualH, mappa){
   let offW = actualW / 750;
   let offH = actualH / 632;
-  let first_coords = [[444,161,365,100], [178,90,366,174], [444,82,532,167], [231,175,345,225], [215,226,366,271,313,209,219,231,327,251], [229,271,381,326], [317,327,493,388], [329,389,454,433], [439,479,316,434], [272,479,438,602]];
+let first_coords = [[444,161,365,100], [178,90,366,174], [444,82,532,167], [231,175,345,225], [215,226,366,271,313,209,219,231,327,251], [229,271,381,326], [317,327,493,388], [329,389,454,433], [439,479,316,434], [272,479,438,602]];
   for(let i = 0; i < first_coords.length; i++){
     for(let j = 0; j < first_coords[i].length; j++){
       if(j%2 == 0){
@@ -29,30 +29,36 @@ function send_datas(zona, nome, opinione){
 }
 
 function get_header(zona, container){
-  var title = document.createElement('h2')
+  var title = document.createElement('h1')
   title.appendChild(document.createTextNode(`Opinioni e commenti sulla zona di ${zona}:`))
   container.appendChild(title)
   container.appendChild(document.createElement('br'))
 } 
 
 function get_form(zona, container){
+  container.style = "text-align: center"
   var par1 = document.createElement('p').appendChild(document.createTextNode("Username: "))
   var par2 = document.createElement('p').appendChild(document.createTextNode("Opinione:"))
   var textIn = document.createElement('input')
+  textIn.style = "height: 35px; width:300px; border-radius: 5px;"
   textIn.type = "text";
   textIn.placeholder = "Il tuo Username..."
   textIn.id = "nome"
   var textAr = document.createElement('textarea')
+  textAr.style = "border-radius: 5px;"
   textAr.placeholder = "La tua opinione..."
   textAr.id = "opinione"
   textAr.rows = "10"
   var submitBut = document.createElement('input')
+  submitBut.style = "height: 40px; width: 55px; border-radius: 5px; cursor: pointer;"
   submitBut.type = "button"
   submitBut.value = "Invia"
+  submitBut.title = "[Il caricamento non e' immediato]"
   submitBut.onclick = function () { send_datas(zona, document.getElementById("nome"), document.getElementById("opinione")); };
   container.appendChild(par1)
   container.appendChild(document.createElement('br'))
   container.appendChild(textIn)
+  container.appendChild(document.createElement('br'))
   container.appendChild(document.createElement('br'))
   container.appendChild(par2)
   container.appendChild(document.createElement('br'))
@@ -60,7 +66,14 @@ function get_form(zona, container){
   container.appendChild(document.createElement('br'))
   container.appendChild(document.createElement('br'))
   container.appendChild(submitBut)
-  container.appendChild(document.createElement('h6').appendChild(document.createTextNode(" [Il caricamento non e' immediato]")))
+  container.appendChild(document.createElement('br'))
+}
+
+
+function get_data_no_zone(path, zona, container){
+  fetchJSONFile(path, function(data){
+    load_data_no_zone(zona, data, container);
+  })
 }
 
 function get_data(path, zona, container){
@@ -98,6 +111,23 @@ function load_data(zona, datas, container){
       col3.appendChild(text3)
       row.appendChild(col1)
       row.appendChild(col2)
+      row.appendChild(col3)
+      container.appendChild(row)
+    }
+  }
+}
+
+function load_data_no_zone(zona, datas, container){
+  for(let i = 0; i < datas.length; i++){
+    if(datas[i].tratto == zona){
+      let row = document.createElement('tr')
+      let col1 = document.createElement('td')
+      let text1 = document.createTextNode(datas[i].username)
+      let col3 = document.createElement('td')
+      let text3 = document.createTextNode(datas[i].opinione)
+      col1.appendChild(text1)
+      col3.appendChild(text3)
+      row.appendChild(col1)
       row.appendChild(col3)
       container.appendChild(row)
     }

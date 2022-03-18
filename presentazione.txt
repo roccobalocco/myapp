@@ -9,5 +9,5 @@ Totale km --> 33km
 Difficolta' --> 1 su 4
 Pendenza Media --> 5%
 Periodo --> tutto l'anno
-Terreno --> asfalt
+Terreno --> asfalto
 Panorama --> 3 su 4

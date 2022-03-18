@@ -1,6 +1,53 @@
-body{
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;  
+*{
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 18px;
+    color: #100C0D;
+}
+body {
+    background-color: #013328;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+#container {
+    position: relative;
+    margin:auto;
+    float: center;
+}
+
+#contenuto {
+    border: 5px solid #CC8B65;
+    background-color: #E3DCD2;
+    border-radius: 15px 50px 30px;
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: underline;
+}
+
+#asideContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.asideElem {
+    border: 5px solid #CC8B65;
+    padding: 5px 10px 5px 10px;
+    background-color: #E3DCD2;
+    margin: 12px 12px 12px 12px;
+    display:block;
 }
 
 table{
@@ -8,10 +55,11 @@ table{
     margin-left: auto;
     float: center;
     min-width: 95%;
+    text-align: center;
 }
 
 td{
-    text-align: center;
+  padding: 15px;  
 }
 
 fieldset{
@@ -22,105 +70,126 @@ form{
     margin: 5px 20px 5px 20px;
 }
 
-textarea{
+textarea{ 
     width:95%;
     resize: vertical;
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 16px;
 }
+
+input{
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+input[type=button]:hover{
+    background-color: #5bc4d6;
+}
+
+footer {
+    border: 5px solid #CC8B65;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E3DCD2;
+    float: center;
+    min-height: 100px;
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+li p:hover {
+    -o-animation: wave-animation 0.3s infinite;
+    -moz-animation: wave-animation 0.3s infinite;
+    -webkit-animation: wave-animation 0.3s infinite;
+    -ms-zoom-animation: wave-animation 0.3s infinite;
+    animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+}
+
+#footerText ul li{
+    display: inline-block;
+}
+
+#footerText ul li a{
+    text-decoration: none;
+}
+
 
 /*Smart-phone*/
 @media only screen and (min-width: 320px){
 
-    body {
-        background-image: linear-gradient(to bottom, rgb(7, 138, 109), rgb(7, 138, 109), rgb(7, 138, 83), #00aa13);
-        width: 100%;
-    }
-
     #container {
-        position: relative;
-        margin:auto;
         width: 90%;
-        float: center;
     }
 
     #contenuto {
-        border-radius: 15px 50px 30px;
-        position: relative;
-        padding: 10px 20px 10px 20px;
-        background: rgba(0, 168, 132, 0.90);
         width: 85%;
         float: center;
         margin-bottom: 20px;
+    }
+
+    li a{
+        color: #100C0D;
     }
 
     .logo{
         height: 150px;
     }
 
-    .image-container {
-        text-align: center;
-    }
-
     .image-container img {
         width: 95%;
-    }
-
-    .mapLink{
-        display: none;
     }
 
     #asideContainer {
         display: block;
         padding: 10px 20px 10px 20px;
         border-radius: 15px 50px 30px;
-        text-align: center;
-        background: rgba(0, 168, 132, 0.90);
         width: 85%;
         float: center;
     }
 
     .asideElem {
         border-radius: 15px 50px 30px;
-        padding: 5px 10px 5px 10px;
-        background: rgba(7, 138, 109, 0.95);
-        margin: 12px 12px 12px 12px;
-        display:block;
     }
 
     footer {
         border-radius: 50px 50px 15px 15px;
-        position: relative;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        background: rgba(0, 170, 19, 0.7);
         width: 92%;
-        float: center;
-        height: 100px;
-        display: flex;
-        margin-bottom: 10px;
-        padding-left: 20px;
-        align-items: center;
     }
 
     /*for show hamburger*/
     header{ display: none; }
     /* hamburger */
-    .checkbox {
-        display: none;
-    }
+    .checkbox { display: none; }
     
     #button {
         position: relative;
-        background-color: white;
+        background-color: #E3DCD2;
         height:4rem;
         width: 4rem;
-        border-radius: 10%;
+        border-radius: 25%;
         position: fixed;
         top: 4vh; 
         right: 4vw; 
         z-index: 2000;
-        box-shadow: 0 1rem 3rem black;
-        text-align: center; 
+        box-shadow: 0 1rem 2rem #CC8B65;
+        text-align: center;
         cursor: pointer;
     }
     
@@ -131,7 +200,7 @@ textarea{
         position: fixed;
         top: 4.5vh; 
         right: 4.5vw; 
-        background-image: radial-gradient(green, white);
+        background-image: radial-gradient(#CC8B65, #e3DCD2);
         z-index: 1000;
         -webkit-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
         -moz-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -179,7 +248,7 @@ textarea{
         font-size: 3rem;
         font-weight: 300;
         padding: 1rem 2rem;
-        color: black;
+        color: #100C0D;
         text-decoration: none;
         text-transform: capitalize;
         transition: all 0.4s;
@@ -187,7 +256,7 @@ textarea{
 
     .link:hover,
     .link:active {
-        color: lightgreen;
+        color: #E3DCD2;
         cursor: pointer;
     }
 
@@ -218,7 +287,7 @@ textarea{
     #icon::after {
         width: 3rem;
         height: 2px;
-        background-color: gray;
+        background-color: #100C0D;
         display: inline-block;
     }
     
@@ -272,23 +341,16 @@ textarea{
 }
 
 /*Personal-computer*/
-@media only screen and (min-width: 950){
-
-    body {
-        background-image: url("../images/mountain2.jpg");
-        background-color: #00aa13;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover; 
-    }
+@media only screen and (min-width: 972px){
 
     navbar {
+        border: 5px solid #CC8B65;
         border-radius: 15px 15px 45px 45px;
         position: relative;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        background: rgba(41, 173, 8, 0.70);
+        background-color: #E3DCD2;
         width: 85%;
         float: center;
         height: 100px;
@@ -299,7 +361,9 @@ textarea{
     }
     
     .logo{
+        display: inline-block;
         padding-left: 10px;
+        padding-right: 10px;
         height: 95px;
     }
 
@@ -308,7 +372,7 @@ textarea{
         position: relative;
         top: 33%;
         margin: 10 10 10 10;
-        color: black; 
+        color: #100C0D; 
     }
     
     .menuItem {
@@ -320,8 +384,12 @@ textarea{
     }
 
     .menuItem:hover{
-        border-radius: 0px 0px 15px 15px;
-        background-color: rgba(34, 112, 15, 0.75);
+        border-radius: 5px 5px 15px 15px;
+        background-color: rgba(204, 139, 101, 1);
+    }
+    
+    .menuItem:hover a {
+        color: #013328;
     }
 
     
@@ -333,7 +401,7 @@ textarea{
         font-weight:500;
         text-transform:uppercase;
         text-decoration:none;
-        color:#16151b;
+        color:#013328;
         margin:0 15px;
         font-size:16px;
         letter-spacing:1px;
@@ -345,7 +413,7 @@ textarea{
         position: absolute;
         width: 100%;
         height: 3px;
-        background:#16151b;
+        background:#013328;
         top:47%;
         animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
@@ -379,7 +447,11 @@ textarea{
     @keyframes show{
         0%{
             opacity:0;
-            transform:translateY(-10px);
+            -webkit-transform: translateY(-10px);
+            -moz-transform: translateY(-10px);
+            -o-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
         }
         100%{
             opacity:1;
@@ -390,32 +462,21 @@ textarea{
     /* FINE BOTTONE PROVA*/
 
     #container {
-        position: relative;
-        margin:auto;
         width: 85%;
-        float: center;
     }
 
     #contenuto {
-        border-radius: 15px 50px 30px;
-        position: relative;
-        padding: 10px 20px 10px 20px;
-        background:  rgba(7, 138, 109, 0.95) /*rgba(3, 101, 230, 0.75)*/;
         width: 65%;
         float: left;
-        margin-bottom: 20px;
     }
 
-    .image-container {
-        text-align: center;
-    }
 
     .image-container img {
         width: 80%;
     }
 
     .image{
-        border: 3px solid whitesmoke;
+        border: 3px solid #CC8B65;
         border-radius: 10%;
     }
 
@@ -425,34 +486,17 @@ textarea{
 
     #asideContainer {
         border-radius: 50px 15px 50px 30px;
-        text-align: center;
-        background: rgba(0, 168, 132, 0.90)/*rgba(37, 148, 212, 0.75)*/;
         width: 25%;
         float: right;
     }
 
     .asideElem {
         border-radius: 50px 15px 50px 30px;
-        padding: 5px 10px 5px 10px;
-        background: rgba(7, 138, 109, 0.95);/*rgba(3, 101, 230, 0.75);*/
-        margin: 12px 12px 12px 12px;
-        display:block;
     }
 
     footer {        
         border-radius: 45px 45px 15px 15px;
-        position: relative;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        background: rgba(0, 170, 19, 0.7);
         width: 85%;
-        float: center;
-        height: 100px;
-        display: flex;
-        margin-bottom: 10px;
-        padding-left: 20px;
-        align-items: center;
     }
 
     /*for not showing hamburger*/
@@ -462,4 +506,39 @@ textarea{
     #icon{ display: none; }
     #background{ display: none; }
     #nav{ display: none; }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 600px){
+    #button{
+        height: 3rem;
+        width: 3rem;
+    }
+
+    #background{
+        height: 2rem;
+        width: 2rem;
+    }
+
+    #icon,
+    #icon::before,
+    #icon::after {
+        width: 2rem;
+        height: 1px;
+    }
+}
+
+@media only screen and (min-width: 972px) and (max-width: 1085px){
+    .logo{
+        display: none;
+    }
+
+    #contenuto{
+        float: left;
+        width: 85%;
+    }
+
+    #asideContainer{
+        float: right;
+        width: 80%;
+    }
 }

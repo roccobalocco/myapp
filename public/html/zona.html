@@ -6,8 +6,12 @@
         <meta name="viewport" content="width=device-width">
         <meta name="author" content="Piemme">
         <meta name="keyword" content="Ciclabili Bici Ciclabile Valchiavenna Chiavenna">
-        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+
+        <link id="mode" rel="stylesheet" type="text/css" />
+        
         <link rel="icon" href="/images/favicon.ico" type="images/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
         <script type="text/javascript" src="../javascripts/util.js"></script>
 
     </head>
@@ -20,7 +24,7 @@
         <div id="background">&nbsp;</div>
         <nav id="nav">
             <ul id="list">
-                <li style="display: inline-block"><img class="logo" src="../images/logo.png"></li>
+                <li><img class="logo" src="../images/logo.png"></li>
                 <li> <a class="link" href="../homepage"> Home </a> </li>
                 <li> <a class="link" href="../piste"> Piste </a> </li>
                 <li> <a class="link" href="../territorio"> Territorio </a> </li>
@@ -30,10 +34,10 @@
         
         <header>
             <navbar>
-                <span style="display: inline-block"><img class="logo" src="../images/logo.png"></span>
+                <span><img class="logo" src="../images/logo.png"></span>
                 <span class="menuItem"><a href="../homepage">Home</a></span>
                 <span class="menuItem"><a href="../piste">Piste</a></span>
-                <span class="menuItem"><a href="../terriorio">Territorio</a></span>
+                <span class="menuItem"><a href="../territorio">Territorio</a></span>
                 <span class="menuItem"><a href="../info">Info</a></span>
             </navbar>
         </header>
@@ -42,7 +46,7 @@
                 <div id="headerContainer"></div>
                 <div id="dataContainer">
                     <table id="tableContainer">
-                        <tr><th>UserName</th><th>Tratto</th><th>Opinione</th></tr>
+                        <tr><th>UserName</th><th>Opinione</th></tr>
                     </table>
                     <br>
                 </div>
@@ -78,14 +82,49 @@
             </div>
         </div>
         <footer>
-            <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                Lorem Ipsium. Lorem Ipsium. Lorem Ipsium. 
-                Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
+            <div id="footerText">
+                <ul>
+                    <li><a class="fa fa-instagram" href="https://www.instagram.com/pietromasolini_1ne/?hl=it">Instagram</a> &nbsp;</li>
+                    <li><a class="fa fa-linkedin" href="https://www.linkedin.com/in/pietro-m-99b7b318a/">Linkedin</a> &nbsp;</li>
+                    <li><a class="fa fa-at" href="mailto:pietro.masolini@studenti.unimi.it">Email</a> &nbsp;</li>
+                    <li><a class="fa fa-github" href="https://github.com/roccobalocco">Github</a> &nbsp;</li>
+                    <li><a class="fa fa-info" href="https://github.com/roccobalocco/myapp">Descrizione progetto</a> &nbsp;</li>
+                    <li><a class="fa fa-institution" href="https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2020/tecnologie-e-linguaggi-il-web">Realizzato per CdL-UniMi</a> &nbsp;</li>
+                    <li>
+                      <p><a id="switcher" style="cursor: pointer; text-decoration: none;" title="Cambia tema"></a></p>
+                    </li>
+                </ul>
+            </div>
         </footer>
         <script>
+            if(localStorage.getItem("mode") == "dark"){
+                document.getElementById("switcher").innerHTML = "&#128262;";
+                document.getElementById("mode").href = "../stylesheets/style_dark.css"
+                console.log("dark-mode")
+            }else{
+                document.getElementById("switcher").innerHTML = "&#127769;";
+                document.getElementById("mode").href = "../stylesheets/style_light.css";
+                console.log("light-mode")
+            }
+
+            //eventListener Lists:
+            document.getElementById("switcher").addEventListener("click", function(){
+                if(localStorage.getItem("mode") == "dark"){
+                    localStorage.setItem("mode", "light");
+                    document.getElementById("switcher").innerHTML = "&#127769;";
+                    document.getElementById("mode").href = "../stylesheets/style_light.css"
+                    console.log("switched to light")
+                }else{
+                    localStorage.setItem("mode", "dark");
+                    document.getElementById("switcher").innerHTML = "&#128262;";
+                    document.getElementById("mode").href = "../stylesheets/style_dark.css";
+                    console.log("switched to dark")
+                }
+            })
+
             var zona = get_zone_from_url()
             get_header(zona, document.getElementById("headerContainer"))
-            get_data('../json/comments.json', zona, document.getElementById("tableContainer"))
+            get_data_no_zone('../json/comments.json', zona, document.getElementById("tableContainer"))
             get_form(zona, document.getElementById("sendComments"))
             
         </script>

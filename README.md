@@ -97,6 +97,7 @@ Resources that I found usefull during the development:
 * [UTF-8 codes](https://www.utf8icons.com/)
 * [Original footer](https://codepen.io/julesforrest/pen/qLpgNB)
 * [Original Hamburger menu](https://codepen.io/alvarotrigo/pen/QWqKOdb)
+* [Color palette inspirations](https://www.shutterstock.com/blog/color-palettes-for-websites)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -93,6 +93,10 @@ Project Link: [https://github.com/roccobalocco/myapp](https://github.com/roccoba
 Resources that I found usefull during the development:
 * [From image to map-image in HTML website](http://www.image-map.net/)
 * [Free infos about everything that works on web](https://www.w3schools.com)
+* [Beautiful icons](https://fontawesome.com/v4/)
+* [UTF-8 codes](https://www.utf8icons.com/)
+* [Original footer](https://codepen.io/julesforrest/pen/qLpgNB)
+* [Original Hamburger menu](https://codepen.io/alvarotrigo/pen/QWqKOdb)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

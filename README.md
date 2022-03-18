@@ -12,9 +12,6 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -27,16 +24,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The Project is focused on showing my abilities with node.js and the language that rotate around him.
-The body of the project is on the bicycle road between Colico and Chiavenna (my town).
+The Project is focused on showing my abilities with node.js and the languages that rotate around him.
+The body of the project is on the bicycle road between Colico and Villa di Chiavenna.
 
 The Project has:
-* A HomePage that shows to the user the road, with a javascript saturation filter to fill the image and the image itself is clickable
-* Various page for the small town that the road hit with comments and the possibility of leave a comment
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+* A HomePage that shows to the user the road and  some usefull infos
+* Various page for the small towns that the road hit with comments and the possibility of leave a comment and see what other users thinks
+* A Territory page to know better the Valley where the road is placed
+* A Infos page
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -57,20 +52,12 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

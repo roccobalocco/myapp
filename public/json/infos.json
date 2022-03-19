@@ -1,0 +1,62 @@
+[
+    {
+        "tratto": "Villa",
+        "km": "4.5",
+        "sosta": "Ultimo paese prima del confine svizzero, munitevi di carta di identita' se volete proseguire. Consigliamo di proseguire sui monti di villa se muniti di mountain-bike.",
+        "infos": "http://www.paesidivaltellina.it/villadichiavenna/index.htm"
+    },
+    {
+        "tratto": "Prosto",
+        "km": "3",
+        "sosta": "Paesino antico che nasconde le cascate dell'acqua Fracta. Sosta obbligata ad osservarle e perche' no, a fare un aperitivo con vista.",
+        "infos": "http://www.infopiuro.it/it/"
+    },
+    {
+        "tratto": "Chiavenna",
+        "km": "2.5",
+        "sosta": "Il paese piu' grande dell'omonima valle. Ideale per una sosta spuntino e perche' no, una visita ai crotti.",
+        "infos": "https://www.valtellina.it/it/chiavenna-e-dintorni"
+    },
+    {
+        "tratto": "Mese",
+        "km": "3",
+        "sosta": "Piccolo paese da cui poter partire per visitare i meravigliosi alpeggi della valle.",
+        "infos": "https://www.comune.mese.so.it/c014043/zf/index.php/servizi-aggiuntivi/index/index/idtesto/63"
+    },
+    {
+        "tratto": "Gordona",
+        "km": "3",
+        "sosta": "Paesino famoso per il Kartodromo Boggia Park e il Birrificio ValleSpluga. Inoltre partendo da qui potete visitare la trattoria Donadivo e le sue particolari vedute, sempre se muniti di mountain bike.",
+        "infos": "http://www.paesidivaltellina.it/gordona/index.htm"
+    },
+    {
+        "tratto": "Samolaco",
+        "km": "5",
+        "sosta": "Ampie distese di campi coltivati ed allevamenti. Segnaliamo la presenza di un piccolo e particolare zoo.",
+        "infos": "http://www.paesidivaltellina.it/samolaco/"
+    },
+    {
+        "tratto": "Novate",
+        "km": "2.5",
+        "sosta": "Paese che da' il nome al lago su cui si affaccia. Una sosta al Lido, se visitate in periodo estivo, vi rallegrera' il viaggio.",
+        "infos": "http://www.paesidivaltellina.it/novatemezzola/index.htm"
+    },
+    {
+        "tratto": "Verceia",
+        "km": "3",
+        "sosta": "Paese che da' sul lago di Mezzola. E' presente una spiaggetta sfruttabile nel periodo estivo.",
+        "infos": "http://www.paesidivaltellina.it/verceia/index.htm"
+    },
+    {
+        "tratto": "Dubino",
+        "km": "3.5",
+        "sosta": "Da qui parte la strada per visitare l'altra parte del lago di Como. Segnaliamo la presenza della riserva naturale Pian di Spagna.",
+        "infos": "http://paesidivaltellina.it/dubino/index.htm"
+    },
+    {
+        "tratto": "Colico",
+        "km": "3",
+        "sosta": "Paese lacustre, snodo tra le province. Ottimo il lungo lago ed il servizio traghetti. Punto di snodo ferroviario.",
+        "infos": "https://www.in-lombardia.it/it/visitare-la-lombardia/vacanza-al-lago/colico"
+    }
+]

@@ -10,10 +10,26 @@
         <link id="mode" rel="stylesheet" type="text/css" />
         
         <link rel="icon" href="/images/favicon.ico" type="images/x-icon" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         
         <script type="text/javascript" src="../javascripts/util.js"></script>
+        <script>
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
 
+            function showDivs(n) {
+                var x = document.getElementsByClassName("reviewCard");
+                console.log("ci sono: " + x.length + " carte")
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length} ;
+                for (let i = 0; i < x.length; i++) {
+                    x[i].style = "display: none";
+                }
+                x[slideIndex-1].style = "display: inline-block";
+                console.log("mostrato solo l'elemento: " + (slideIndex-1))
+            }
+        </script>
     </head>
     <body>
         <!-- hamburger -->
@@ -43,11 +59,13 @@
         </header>
         <div id="container">
             <div id="contenuto">
+                <div id="imgContainer" class="image-container"></div>
                 <div id="headerContainer"></div>
                 <div id="dataContainer">
                     <table id="tableContainer">
                         <tr><th>UserName</th><th>Opinione</th></tr>
                     </table>
+                    <div id="gallery"></div>
                     <br>
                 </div>
                 <div id="formContainer">
@@ -61,22 +79,17 @@
             </div>
             <div id="asideContainer">
                 <aside class="asideElem">
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
+                    <div id="infoZona"></div>
                 </aside>
                 <aside class="asideElem">
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
-                    <p>Lorem Ipsium. Lorem Ipsium. Lorem Ipsium.</p>
+                    <h3>Parlano di noi</h3>
+                    <ul style="padding-left: 0">
+                        <li><a target="_blank" href="http://www.bicitalia.org/it/percorsi/127-itinerario-ciclabile-della-valchiavenna">BiciItalia</a></li>
+                        <li><a target="_blank" href="https://www.valtellina.it/it/bike/cicloturismo/percorsi/ciclabile-valchiavenna">Valtellina.it</a> </li>
+                        <li><a target="_blank" href="https://www.valtellinasport.com/luoghi/chiavenna/ciclabile-valchiavenna.htm">ValtellinaSport</a></li>
+                        <li><a target="_blank" href="https://www.google.com/maps/d/viewer?mid=18GGboEZFDatwbsDe4d74IX8qY4Q&ll=46.2599934443989%2C9.438118700000029&z=12">GoogleMyMaps</a></li>
+                        <li><a target="_blank" href="http://www.valchiavennabike.it/it/percorsi-ciclabili/ciclabile-valchiavenna/">ValchiavennaBike</a></li>
+                    </ul>
                 </aside>
             
             </div>
@@ -97,6 +110,8 @@
             </div>
         </footer>
         <script>
+            var slideIndex = 1;
+
             if(localStorage.getItem("mode") == "dark"){
                 document.getElementById("switcher").innerHTML = "&#128262;";
                 document.getElementById("mode").href = "../stylesheets/style_dark.css"
@@ -125,7 +140,10 @@
             var zona = get_zone_from_url()
             get_header(zona, document.getElementById("headerContainer"))
             get_data_no_zone('../json/comments.json', zona, document.getElementById("tableContainer"))
+            get_gallery_no_zone('../json/comments.json', zona, document.getElementById("gallery")) 
             get_form(zona, document.getElementById("sendComments"))
+            get_info('../json/infos.json', zona, document.getElementById("infoZona"))
+            get_img(zona, document.getElementById("imgContainer"))
             
         </script>
     </body>

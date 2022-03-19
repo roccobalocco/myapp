@@ -73,7 +73,7 @@ function get_img(zona, container){
   let img = document.createElement('img')
   img.title = zona
   img.className = "image"
-  img.src = `images/${zona.toLowerCase()}.jpg`
+  img.src = `../images/${zona.toLowerCase()}.jpg`
   container.appendChild(img)
 }
 

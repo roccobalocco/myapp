@@ -19,7 +19,6 @@ body {
 #container {
     position: relative;
     margin:auto;
-    float: center;
 }
 
 #contenuto {
@@ -60,7 +59,6 @@ li a{
 table{
     border-collapse: collapse;
     padding: 5px 5px 5px 5px;
-    float: center;
     min-width: 95%;
     text-align: center;
 }
@@ -113,7 +111,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     background-color: #E3DCD2;
-    float: center;
     min-height: 100px;
     display: flex;
     margin-bottom: 10px;
@@ -160,7 +157,6 @@ li p:hover {
 
     #contenuto {
         width: 85%;
-        float: center;
         margin-bottom: 20px;
     }
 
@@ -181,7 +177,6 @@ li p:hover {
         padding: 10px 20px 10px 20px;
         border-radius: 15px 50px 30px;
         width: 85%;
-        float: center;
     }
 
     .asideElem {
@@ -201,7 +196,6 @@ li p:hover {
         display: block;
         width: 90%;
         text-align: center;
-        float: center;
     }
 
     #prevContainer{
@@ -426,7 +420,7 @@ li p:hover {
 /*Personal-computer*/
 @media only screen and (min-width: 972px){
 
-    navbar {
+    #navHead {
         border: 5px solid #CC8B65;
         border-radius: 15px 15px 45px 45px;
         position: relative;
@@ -435,7 +429,6 @@ li p:hover {
         margin-right: auto;
         background-color: #E3DCD2;
         width: 85%;
-        float: center;
         height: 100px;
         display: flex;
         margin-bottom: 20px;
@@ -454,7 +447,7 @@ li p:hover {
         text-decoration: none;
         position: relative;
         top: 33%;
-        margin: 10 10 10 10;
+        margin: 10px 10px 10px 10px;
         color: #100C0D; 
     }
     
@@ -479,7 +472,7 @@ li p:hover {
 
     /*INIZIO BOTTONE PROVA*/
     
-    navbar a{
+    #navHead a{
         top: 33%;
         font-weight:500;
         text-transform:uppercase;
@@ -489,9 +482,9 @@ li p:hover {
         font-size:16px;
         letter-spacing:1px;
         position:relative;
-        margin: 10 10 10 10;
+        margin: 10px 10px 10px 10px;
     }
-    navbar a:before{
+    #navHead a:before{
         content:'';
         position: absolute;
         width: 100%;
@@ -500,7 +493,7 @@ li p:hover {
         top:47%;
         animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
-    navbar a:hover:before{
+    #navHead a:hover:before{
         animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
     }
     @keyframes in{
@@ -641,4 +634,16 @@ li p:hover {
         float: right;
         width: 80%;
     }
+}
+
+@media only screen and (max-height: 530px) {
+
+    #list .logo{
+        display: none;
+    }
+
+    #list .link{
+        font-size: 1.75rem;
+    }
+
 }

@@ -8,7 +8,7 @@
         <meta name="author" content="Piemme">
         <meta name="keyword" content="Ciclabili Bici Ciclabile Valchiavenna Chiavenna">
 
-        <link id="mode" rel="stylesheet" type="text/css" />
+        <link id="mode" rel="stylesheet" type="text/css" href="stylesheets/style_light.css"/>
         
         <link rel="icon" href="images/favicon.ico" type="images/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +31,7 @@
         <div id="background">&nbsp;</div>
         <nav id="nav">
             <ul id="list">
-                <li style="display: inline"><img class="logo" src="images/logo.png"></li>
+                <li style="display: inline"><img class="logo" src="images/logo.png" alt="Logo"></li>
                 <li> <a class="link" href="./homepage"> Home </a> </li>
                 <li> <a class="link" href="./piste"> Piste </a> </li>
                 <li> <a class="link" href="./territorio"> Territorio </a> </li>
@@ -40,13 +40,13 @@
         </nav>
         
         <header>
-            <navbar>
-                <span style="display: inline"><img class="logo" src="images/logo.png"></span>
+            <nav id="navHead">
+                <span style="display: inline"><img class="logo" src="images/logo.png" alt="Logo"></span>
                 <span class="menuItem"><a href="./homepage">Home</a></span>
                 <span class="menuItem"><a href="./piste">Piste</a></span>
                 <span class="menuItem"><a href="./territorio">Territorio</a></span>
                 <span class="menuItem"><a href="./info">Info</a></span>
-            </navbar>
+            </nav>
         </header>
         <div id="container">
             <div id="contenuto" style="width: 96%;">
@@ -55,14 +55,13 @@
                     per la maggior parte wikipedia, e da conoscenze dell'autore. </p>
                 <p>Per contattare ed avere informazioni sull'autore si veda in fondo alla pagina.</p>
                 <p>Ogni parte di questo progetto e' accessibile attraverso la pagina github dedicata</p>
-                <p>Di particolare interesse possono risultare le seguenti funzionalita':
+                <p>Di particolare interesse possono risultare le seguenti funzionalita':</p>
                     <ul>
                         <li>Funzione javascript per rimodulare le coordinate di una mappa html in base alla taglia dell'immagine</li>
                         <li>Funzioni javascript per l'interrogazione di file JSON e l'aggiunta di parti html derivate dai dati</li>
                         <li>Funzioni javascript [Node] per ottenere ed inviare dati a un database noSQL [Mongo]</li>
                         <li>Funzione javascript per mostrare cards in slideshow</li>
                     </ul>
-                </p>
                 <p>Si segnala che parte del codice scritto e' stato derivato da esempi trovati online, per saperne di piu' si legga
                     la descrizione del progetto nel repository github.
                 </p>
@@ -78,33 +77,44 @@
                     <li><a class="fa fa-info" href="https://github.com/roccobalocco/myapp">Descrizione progetto</a> &nbsp;</li>
                     <li><a class="fa fa-institution" href="https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2020/tecnologie-e-linguaggi-il-web">Realizzato per CdL-UniMi</a> &nbsp;</li>
                     <li>
+                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                            <img id="blueCSS" style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /> 
+                            <img id ="yellowCSS" style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+                        </a>
+                    </li>
+                    <li>
                       <p><a id="switcher" style="cursor: pointer; text-decoration: none;" title="Cambia tema"></a></p>
                     </li>
                 </ul>
             </div>
-            <div id="footerSwitch">
-                <a id="switcher" style="cursor: pointer;" title="Cambia tema"></a>
-            </div>
         </footer>
         <script>
             if(localStorage.getItem("mode") == "dark"){
-                document.getElementById("switcher").innerHTML = "&#128262;";
+                document.getElementById("yellowCSS").style = "display: none"
+                document.getElementById("blueCSS").style = "display: inline"
+                document.getElementById("switcher").innerHTML = "&#128262;"
                 document.getElementById("mode").href = "stylesheets/style_dark.css"
                 console.log("dark-mode")
             }else{
-                document.getElementById("switcher").innerHTML = "&#127769;";
-                document.getElementById("mode").href = "stylesheets/style_light.css";
+                document.getElementById("yellowCSS").style = "display: inline"
+                document.getElementById("blueCSS").style = "display: none"                    
+                document.getElementById("switcher").innerHTML = "&#127765;"
+                document.getElementById("mode").href = "stylesheets/style_light.css"
                 console.log("light-mode")
             }
 
             //eventListener Lists:
             document.getElementById("switcher").addEventListener("click", function(){
                 if(localStorage.getItem("mode") == "dark"){
+                    document.getElementById("yellowCSS").style = "display: inline"
+                    document.getElementById("blueCSS").style = "display: none"
                     localStorage.setItem("mode", "light");
-                    document.getElementById("switcher").innerHTML = "&#127769;";
+                    document.getElementById("switcher").innerHTML = "&#127765;"
                     document.getElementById("mode").href = "stylesheets/style_light.css"
                     console.log("switched to light")
                 }else{
+                    document.getElementById("yellowCSS").style = "display: none"
+                    document.getElementById("blueCSS").style = "display: inline"  
                     localStorage.setItem("mode", "dark");
                     document.getElementById("switcher").innerHTML = "&#128262;";
                     document.getElementById("mode").href = "stylesheets/style_dark.css";

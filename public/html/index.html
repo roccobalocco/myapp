@@ -8,7 +8,7 @@
         <meta name="author" content="Piemme">
         <meta name="keyword" content="Ciclabili Bici Ciclabile Valchiavenna Chiavenna">
 
-        <link id="mode" rel="stylesheet" type="text/css" />
+        <link id="mode" rel="stylesheet" type="text/css" href="stylesheets/style_light.css"/>
         
         <link rel="icon" href="images/favicon.ico" type="images/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,7 +31,7 @@
         <div id="background">&nbsp;</div>
         <nav id="nav">
             <ul id="list">
-                <li style="display: inline"><img class="logo" src="images/logo.png"></li>
+                <li style="display: inline"><img class="logo" src="images/logo.png" alt="Logo"></li>
                 <li> <a class="link" href="./homepage"> Home </a> </li>
                 <li> <a class="link" href="./piste"> Piste </a> </li>
                 <li> <a class="link" href="./territorio"> Territorio </a> </li>
@@ -40,13 +40,13 @@
         </nav>
         
         <header>
-            <navbar>
-                <span style="display: inline"><img class="logo" src="images/logo.png"></span>
+            <nav id="navHead">
+                <span style="display: inline"><img class="logo" src="images/logo.png" alt="Logo"></span>
                 <span class="menuItem"><a href="./homepage">Home</a></span>
                 <span class="menuItem"><a href="./piste">Piste</a></span>
                 <span class="menuItem"><a href="./territorio">Territorio</a></span>
                 <span class="menuItem"><a href="./info">Info</a></span>
-            </navbar>
+            </nav>
         </header>
         <div id="container">
             <div id="contenuto">
@@ -60,18 +60,18 @@
                 <div class="image-container">    
                     <img id="mappa" src="images/chiavenna_colico.jpg" usemap="#image-map" class="image" 
                     title="Ciclabile della Valchiavenna, photo by https://www.valtellina.it/it/bike/cicloturismo/percorsi/ciclabile-valchiavenna"
-                    alt="Ciclabile della Valchiavenna, photo by https://www.valtellina.it/it/bike/cicloturismo/percorsi/ciclabile-valchiavenna">
+                    alt="Ciclabile della Valchiavenna">
                     <map name="image-map" id="image-map">
-                        <area alt="Prosto" title="Prosto" href="./zone?z=Prosto" shape="rect">
-                        <area alt="Chiavenna" title="Chiavenna" href="./zone?z=Chiavenna" shape="rect">
-                        <area alt="Villa di Chiavenna" title="Villa di Chiavenna" href="./zone?z=Villa" shape="rect">
-                        <area alt="Mese" title="Mese" href="./zone?z=Mese" shape="rect">
-                        <area alt="Gordona" title="Gordona" href="./zone?z=Gordona" shape="rect">
-                        <area alt="Samolaco" title="Samolaco" href="./zone?z=Samolaco" shape="rect">
-                        <area alt="Novate Mezzola" title="Novate Mezzola" href="./zone?z=Novate" shape="rect">
-                        <area alt="Verceia" title="Verceia" href="./zone?z=Verceia" shape="rect">
-                        <area alt="Dubino" title="Dubino" href="./zone?z=Dubino" shape="rect">
-                        <area alt="Colico" title="Colico" href="./zone?z=Colico" shape="rect">
+                        <area alt="Prosto" title="Prosto" href="./zone?z=Prosto" shape="rect" coords="0,0,1,1">
+                        <area alt="Chiavenna" title="Chiavenna" href="./zone?z=Chiavenna" shape="rect" coords="0,0,1,1">
+                        <area alt="Villa di Chiavenna" title="Villa di Chiavenna" href="./zone?z=Villa" shape="rect" coords="0,0,1,1">
+                        <area alt="Mese" title="Mese" href="./zone?z=Mese" shape="rect" coords="0,0,1,1">
+                        <area alt="Gordona" title="Gordona" href="./zone?z=Gordona" shape="rect" coords="0,0,1,1">
+                        <area alt="Samolaco" title="Samolaco" href="./zone?z=Samolaco" shape="rect" coords="0,0,1,1">
+                        <area alt="Novate Mezzola" title="Novate Mezzola" href="./zone?z=Novate" shape="rect" coords="0,0,1,1">
+                        <area alt="Verceia" title="Verceia" href="./zone?z=Verceia" shape="rect" coords="0,0,1,1">
+                        <area alt="Dubino" title="Dubino" href="./zone?z=Dubino" shape="rect" coords="0,0,1,1">
+                        <area alt="Colico" title="Colico" href="./zone?z=Colico" shape="rect" coords="0,0,1,1">
                     </map>
                     <br>
                     <h6 style="display: inline; font-size:10px">[clicca sulla parte di mappa che ti interessa per saperne di piu']</h6>
@@ -122,37 +122,51 @@
                     <li><a class="fa fa-info" href="https://github.com/roccobalocco/myapp">Descrizione progetto</a> &nbsp;</li>
                     <li><a class="fa fa-institution" href="https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2020/tecnologie-e-linguaggi-il-web">Realizzato per CdL-UniMi</a> &nbsp;</li>
                     <li>
-                      <p><a id="switcher" style="cursor: pointer; text-decoration: none;" title="Cambia tema"></a></p>
+                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                            <img id="blueCSS" style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /> 
+                            <img id ="yellowCSS" style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+                        </a>
+                    </li>
+                    <li>
+                        <p><a id="switcher" style="cursor: pointer; text-decoration: none;" title="Cambia tema"></a></p>
                     </li>
                 </ul>
             </div>
         </footer>
         <script>
+            
             if(localStorage.getItem("mode") == "dark"){
-                document.getElementById("switcher").innerHTML = "&#128262;";
+                document.getElementById("yellowCSS").style = "display: none"
+                document.getElementById("blueCSS").style = "display: inline"
+                document.getElementById("switcher").innerHTML = "&#128262;"
                 document.getElementById("mode").href = "stylesheets/style_dark.css"
                 console.log("dark-mode")
             }else{
-                document.getElementById("switcher").innerHTML = "&#127769;";
-                document.getElementById("mode").href = "stylesheets/style_light.css";
+                document.getElementById("yellowCSS").style = "display: inline"
+                document.getElementById("blueCSS").style = "display: none"
+                document.getElementById("switcher").innerHTML = "&#127765;"
+                document.getElementById("mode").href = "stylesheets/style_light.css"
                 console.log("light-mode")
             }
 
             //eventListener Lists:
             document.getElementById("switcher").addEventListener("click", function(){
                 if(localStorage.getItem("mode") == "dark"){
-                    localStorage.setItem("mode", "light");
-                    document.getElementById("switcher").innerHTML = "&#127769;";
+                    document.getElementById("yellowCSS").style = "display: inline"
+                    document.getElementById("blueCSS").style = "display: none"
+                    localStorage.setItem("mode", "light");                    
+                    document.getElementById("switcher").innerHTML = "&#127765;"
                     document.getElementById("mode").href = "stylesheets/style_light.css"
                     console.log("switched to light")
                 }else{
+                    document.getElementById("yellowCSS").style = "display: none"
+                    document.getElementById("blueCSS").style = "display: inline"  
                     localStorage.setItem("mode", "dark");
                     document.getElementById("switcher").innerHTML = "&#128262;";
                     document.getElementById("mode").href = "stylesheets/style_dark.css";
                     console.log("switched to dark")
                 }
             })
-
 
             document.getElementById("mappa").addEventListener('mousemove', function(){
                 if(saturation == 0 || saturation == 5){

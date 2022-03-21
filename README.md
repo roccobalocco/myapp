@@ -105,14 +105,14 @@ The page structure is often the same, a header with a navbar (hamburger menu for
 <ul>
   <li>homepage (index.html)
   <ul>
-    <li>territorio (territorio.html)<li>
+    <li>territorio (territorio.html)</li>
     <li>info (info.html)</li>
     <li>piste (piste.html)
       <ul>
-        <li>specific zone (zona.html)<li>
+        <li>specific zone (zona.html)</li>
       </ul>
     </li>
-    <li>specific zone (zona.html)<li>
+    <li>specific zone (zona.html)</li>
   </ul>
   </li>
 </ul>

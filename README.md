@@ -117,7 +117,7 @@ The page structure is often the same, a header with a navbar (hamburger menu for
   </li>
 </ul>
 
-![Website_Map](./public/images/forREADME/webMap.drawio.png "Map")
+![Website_Map](./public/images/webMap.drawio.png "Map")
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

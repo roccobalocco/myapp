@@ -103,15 +103,18 @@ The page structure is often the same, a header with a navbar (hamburger menu for
 ## Hierarchical Order Diagram of Resources
 
 <ul>
-  <li>homepage (index.html)</li>
-  <li>territorio (territorio.html)<li>
-  <li>info (info.html)</li>
-  <li>piste (piste.html)
-    <ul>
-      <li>specific zone (zona.html)<li>
-    </ul>
+  <li>homepage (index.html)
+  <ul>
+    <li>territorio (territorio.html)<li>
+    <li>info (info.html)</li>
+    <li>piste (piste.html)
+      <ul>
+        <li>specific zone (zona.html)<li>
+      </ul>
+    </li>
+    <li>specific zone (zona.html)<li>
+  </ul>
   </li>
-  <li>specific zone (zona.html)<li>
 </ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>

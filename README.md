@@ -18,21 +18,10 @@
       <a href="#architecture">Architecture</a>
       <ul>
         <li><a href="#hierarchical-order-diagram-of-resources">Hierarchical Order Diagram of Resources</a></li>
-        <li><a href="#resources-description">Resources Description</a></li>
       </ul>
-    </li>
-    <li>
-      <a href="#code">Code</a>
-      <ul>
-        <li><a href="#html">HTML</a></li>
-        <li><a href="#css">CSS</a></li>
-        <li><a href="#api">API</a></li>
-        <li><a href="#javascript">JavaScript</a></li>
-        <li><a href="#node.js">Node.js</a></li>
-      </ul>
-    </li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Riconoscimenti</a></li>
+    <li><a href="#for-external-visitors">For External Visitors</a></li>
   </ol>
 </details>
 
@@ -51,31 +40,59 @@ The Project has:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ## Built For
+
+The Target users are either "fit" people or people who appreciates bikes. Who arrives in the website have to know what he wants, the website doesn't guide the user. 
+The connection does not require a large bandwidth and can be estabilished with any device.
+
+The Language used is the natural language that anyone can understand.
+
+The Website can be categorized between educational and fun, the research should be direct and active, with small traits of explorative search.
+Based on Bates model's the main category is "Searching" and the secondary is "Browsing".
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Model Value
 
+The value of the application comes out from the quantity of users that can visit it, thus the business model should be something like affiliation or ads-based. Obviously you have to expand the road that the website can cover to attract more users and more money.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Data Flow
+
+The datas were already produced and free to use. The only costs came out from the adaptation of them.
+
+The memorization and organization is directory based on the type of data and name of the files based on what they have inside. The JSON files (that are only two) are internal organized to be used easily in a javascript function.
+comment.json is a simple JSON array's filled with MongoDB datas, and the other one (infos.json) is hand-written in the same way.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [Node.js](https://nodejs.org/en/)
 * [MongoDB](https://www.mongodb.com/)
 * [Express](http://expressjs.com/)
 
+The standard used here are HTML5, CSS3, Node.js for the server-side, JSON for datas, JavaScript and Jade for the error page. 
+I tried to reuse more code as possible, so the page for a single zone is written only once and then composed by many javascript function (stored in util.js) that built up the page with the comment-table/cards-slideshow, zone header and form to send opinions.
+
+In this project the controllers are mainly app.js and users.js. These files catch up the request of the user and load the right resources (html, css, js, imgs, ecc..). Those resources provide to create the correct UI.
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Interfaces
+
+The project is builted around four html files:
+* index.html, homepage;
+* zona.html, road trait;
+* piste.html, lists of all the traits and opinions;
+* territorio.html, territorial infos; 
+* info.html, author thoughts.
+
+There are two mode for the UI, a "light mode" that use, mostly, dark-green/orange/beige/white/black colors and a "dark mode" that use, mostly, black/electric-blue/gray/white colors.
+
+The page structure is often the same, a header with a navbar (hamburger menu for smartphones and tablets), a main container with the context div and an aside part with two aside elements and then a simple footer.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -85,33 +102,17 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Hierarchical Order Diagram of Resources
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Resources Description
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Code
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## HTML
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## CSS
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## API
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## JavaScript
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Node.js<p id="node.js"></p>
+<ul>
+  <li>homepage (index.html)</li>
+    <li>territorio (territorio.html)<li>
+    <li>info (info.html)</li>
+    <li>piste (piste.html)
+      <ul>
+        <li>specific zone (zona.html)<li>
+      <ul>
+    </li>
+    <li>specific zone (zona.html)<li>
+</ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

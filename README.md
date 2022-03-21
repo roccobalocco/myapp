@@ -33,8 +33,8 @@ The Project is focused on showing my abilities with node.js and the languages th
 The body of the project is on the bicycle road between Colico and Villa di Chiavenna.
 
 The Project has:
-* A HomePage that shows to the user the road and  some usefull infos
-* Various page for the small towns that the road hit with comments and the possibility of leave a comment and see what other users thinks
+* A HomePage that shows to the user the road and some usefull infos
+* Various page for the small towns that the road hit with the possibility of leave a comment and see what other users thinks
 * A Territory page to know better the Valley where the road is placed
 * A Infos page
 
@@ -54,7 +54,7 @@ Based on Bates model's the main category is "Searching" and the secondary is "Br
 
 ## Model Value
 
-The value of the application comes out from the quantity of users that can visit it, thus the business model should be something like affiliation or ads-based. Obviously you have to expand the road that the website can cover to attract more users and more money.
+The value of the application comes out from the quantity of users that can visit it, thus the business model should be something like affiliation or ads-based. Obviously you have to expand the roads list to attract more users and more money.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -62,7 +62,7 @@ The value of the application comes out from the quantity of users that can visit
 
 The datas were already produced and free to use. The only costs came out from the adaptation of them.
 
-The memorization and organization is directory based on the type of data and name of the files based on what they have inside. The JSON files (that are only two) are internal organized to be used easily in a javascript function.
+The memorization and organization is directory based. The JSON files (that are only two) are internal organized to be used easily in a javascript function.
 comment.json is a simple JSON array's filled with MongoDB datas, and the other one (infos.json) is hand-written in the same way.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -83,7 +83,7 @@ In this project the controllers are mainly app.js and users.js. These files catc
 
 ## Interfaces
 
-The project is builted around four html files:
+The project is builted around five html files:
 * index.html, homepage;
 * zona.html, road trait;
 * piste.html, lists of all the traits and opinions;

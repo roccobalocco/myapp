@@ -14,11 +14,7 @@
       </ul>
     </li>
     <li><a href="#interfaces">Interfaces</a></li>
-    <li>
-      <a href="#architecture">Architecture</a>
-      <ul>
-        <li><a href="#hierarchical-order-diagram-of-resources">Hierarchical Order Diagram of Resources</a></li>
-      </ul>
+    <li><a href="#architecture">Architecture</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Riconoscimenti</a></li>
     <li><a href="#for-external-visitors">For External Visitors</a></li>
@@ -98,10 +94,6 @@ The page structure is often the same, a header with a navbar (hamburger menu for
 
 ## Architecture
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Hierarchical Order Diagram of Resources
-
 <ul>
   <li>homepage (index.html)
   <ul>
@@ -116,6 +108,9 @@ The page structure is often the same, a header with a navbar (hamburger menu for
   </ul>
   </li>
 </ul>
+
+![Website_Map](./public/images/webMap.drawio.png "Map")
+![Project_MVCs](./public/images/MVC.drawio.png "MVCs")
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

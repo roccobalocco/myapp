@@ -81,6 +81,14 @@
                     </table>
                     <div id="gallery"></div>
                     <br>
+                    <div id="formContainer">
+                        <fieldset>
+                            <legend>La tua opinione:</legend>
+                            <form id="sendComments">
+                                
+                            </form>
+                        </fieldset>
+                    </div>
                 </div>
                 <br>
             </div>
@@ -127,7 +135,6 @@
         <script>
             var slideIndex = 1;
             
-            
             if(localStorage.getItem("mode") == "dark"){
                 document.getElementById("yellowCSS").style = "display: none"
                 document.getElementById("blueCSS").style = "display: inline"
@@ -162,9 +169,9 @@
             })
 
             window.onload = function(){
-                console.log("caricando tabella")
                 get_data('../json/comments.json', document.getElementById("tableContainer"))
                 get_gallery('../json/comments.json', document.getElementById("gallery")) 
+                get_form("Ciclabile Valchiavenna", document.getElementById("sendComments")) 
             }
         </script>
     </body>

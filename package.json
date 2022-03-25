@@ -18,8 +18,8 @@
     "http-errors": "~1.6.3",
     "ip": "^1.1.5",
     "jade": "^0.31.2",
-    "mongodb-core": "*",
-    "mongodb": "*",
+    "mongodb": "^4.4.1",
+    "mongodb-core": "^3.2.7",
     "morgan": "~1.9.1"
   },
   "devDependencies": {

@@ -22,6 +22,8 @@
 </details>
 
 
+## <a href="https://ciclabili-valchiavenna.herokuapp.com/homepage">Link to the app, online with Heroku</a>
+
 
 ## About The Project
 
@@ -65,6 +67,7 @@ comment.json is a simple JSON array's filled with MongoDB datas, and the other o
 
 ## Built With
 
+* [Heroku](https://dashboard.heroku.com/apps)
 * [Node.js](https://nodejs.org/en/)
 * [MongoDB](https://www.mongodb.com/)
 * [Express](http://expressjs.com/)

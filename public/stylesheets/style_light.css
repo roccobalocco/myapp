@@ -1,3 +1,7 @@
+html{
+    animation: entering 1s;
+}
+
 *{
     font-family: 'Oswald', Helvetica, sans-serif;
     font-size: 18px;
@@ -8,7 +12,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
-    animation: entering 1s;
 }
 
 @keyframes entering {
@@ -57,6 +60,8 @@ li a{
 }
 
 table{
+    margin-left: auto;
+    margin-right: auto;
     border-collapse: collapse;
     padding: 5px 5px 5px 5px;
     min-width: 95%;
@@ -115,6 +120,7 @@ footer {
     display: flex;
     margin-bottom: 10px;
     padding-left: 20px;
+    padding-right: 20px;
     align-items: center;
 }
 
@@ -576,7 +582,7 @@ li p:hover {
 
     /*for not showing card slideshow*/
     #gallery{ display: none; }
-    #tableContainer{ display: block; }
+    #tableContainer{ display: table; }
     /*for not showing hamburger*/
     header{ display:  block; }
     #navi-toggle{ display: none; }

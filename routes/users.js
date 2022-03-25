@@ -23,7 +23,11 @@ router.get('/send_data', (req, res, next) => {
   myDb.insert(req.query.u, req.query.o, req.query.z);
   myDb.retrieve();
   
-  res.redirect(`http://${ip.address()}:3000/zone?z=${req.query.z}`)
+  if(req.query.z == "Ciclabile Valchiavenna"){
+    res.redirect(`http://${ip.address()}:3000/piste`)
+  }else{
+    res.redirect(`http://${ip.address()}:3000/zone?z=${req.query.z}`)
+  }
   res.end()
 })
 

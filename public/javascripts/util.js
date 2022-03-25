@@ -24,8 +24,11 @@ function get_zone_from_url(){
 }
 
 function send_datas(zona, nome, opinione){
-  //dovresti reindirizzare la pagina alla route corrispondente con url con username, tratto e opinione con - al posto degli spazi
-  window.location.href = window.location.toString().concat(`/send_data?u=${nome.value}&o=${opinione.value}&z=${zona}`).replace("?z=".concat(zona), "");
+  if(zona == "Ciclabile Valchiavenna"){
+    window.location.href = window.location.toString().concat(`zone/send_data?u=${nome.value}&o=${opinione.value}&z=${zona}`).replace("piste","");
+  }else{
+    window.location.href = window.location.toString().concat(`/send_data?u=${nome.value}&o=${opinione.value}&z=${zona}`).replace("?z=".concat(zona), "");
+  }
 }
 
 function get_header(zona, container){

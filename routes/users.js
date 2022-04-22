@@ -13,6 +13,7 @@ router.post('/', (req, res, next) => {
 /*GET zone page. */
 router.get('', (req, res, next) => { 
   console.log("entrando in router / con url pari a: " + req.url)
+  myDb.retrieve()
   res.writeHead(200, {"Content-Type": "text/html"})
   res.write(fs.readFileSync('public/html/zona.html'))
   res.end()  

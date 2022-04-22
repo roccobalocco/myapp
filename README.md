@@ -138,6 +138,8 @@ Resources that I found usefull during the development:
 * [Original Hamburger menu](https://codepen.io/alvarotrigo/pen/QWqKOdb)
 * [Color palette inspirations](https://www.shutterstock.com/blog/color-palettes-for-websites)
 
+All the HTML&CSS files have been validated by the w3c validator.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 

@@ -19,13 +19,13 @@ router.get('', (req, res, next) => {
 })
 
 router.get('/send_data', (req, res, next) => {
-  console.log("entrando in router /send_data con url originale pari a: " + req.originalUrl)
+  console.log("entrando in router /send_data con url pari a: " + req.url)
   myDb.insert(req.query.u, req.query.o, req.query.z);
   myDb.retrieve();
   
   var firstPart = ""
   
-  if(req.url.includes("heroku")){
+  if(!ip.address().includes("192.")){
     firstPart = "https://ciclabili-valchiavenna.herokuapp.com"
   }else{
     firstPart = `http://${ip.address()}:3000`

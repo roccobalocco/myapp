@@ -164,6 +164,7 @@ function load_data(datas, container){
   for(let i = 0; i < datas.length; i++){
     if(datas[i].opinione != ""){
       let row = document.createElement('tr')
+      row.className = "righetta"
       let col1 = document.createElement('td')
       let text1 = document.createTextNode(datas[i].username)
       let col2 = document.createElement('td')
@@ -284,4 +285,37 @@ function load_data_no_zone(zona, datas, container){
       container.appendChild(row)
     }
   }
+}
+
+function filter_by(l, z){
+  for(let i = 0; i < l.length; i++){
+    if(l[i].firstChild.innerText  == z){
+      l[i].style = "display: default"
+    }else{
+      l[i].style = "display: none"
+    }
+  }
+}
+
+function get_filter(container){
+  fetchJSONFile('../json/comments.json', function(data){
+    load_filter(data, container)
+  })
+}
+
+function load_filter(datas, container){
+  let arr = []
+  for(let i = 0; i < datas.length; i++){
+    arr.push(datas[i].tratto)
+  }
+  arr = [...new Set(arr)]
+  arr.forEach(e => {
+    let opt = document.createElement('option')
+    opt.value = e
+    opt.innerText = e
+    if(e == "Ciclabile Valchiavenna"){
+      opt.defaultSelected = true
+    }
+    container.appendChild(opt)
+  });
 }

@@ -75,7 +75,14 @@
                 </ul>
 
                 <div id="dataContainer">
-                    <h2>Opinioni degli utenti:</h2>
+                    <div>
+                        <h2 style='float:left'>Opinioni degli utenti:</h2> 
+                        <p style='float:right; padding:10px'>
+                            Filtra:
+                            <select id="filter">
+                            </select>
+                        </p>
+                    </div>
                     <table id="tableContainer">
                         <tr><th>Tratto</th><th>UserName</th><th>Opinione</th></tr>
                     </table>
@@ -168,10 +175,15 @@
                 }
             })
 
+            document.getElementById("filter").addEventListener("change", function(){
+                filter_by(document.getElementsByClassName("righetta"), document.getElementById("filter").value)
+            })
+
             window.onload = function(){
                 get_data('../json/comments.json', document.getElementById("tableContainer"))
                 get_gallery('../json/comments.json', document.getElementById("gallery")) 
                 get_form("Ciclabile Valchiavenna", document.getElementById("sendComments")) 
+                get_filter(document.getElementById("filter"))
             }
         </script>
     </body>

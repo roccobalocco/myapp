@@ -20,7 +20,11 @@
             }
 
             function showDivs(n) {
-                var x = document.getElementsByClassName("reviewCard");
+                var y = document.getElementsByClassName("notShow")
+                for(let i = 0; i < y.length; i++){
+                    y[i].style= "display: none"
+                }
+                var x = document.getElementsByClassName("toShow")
                 console.log("ci sono: " + x.length + " carte")
                 if (n > x.length) {slideIndex = 1}
                 if (n < 1) {slideIndex = x.length} ;
@@ -75,14 +79,12 @@
                 </ul>
 
                 <div id="dataContainer">
-                    <div>
-                        <h2 style='float:left'>Opinioni degli utenti:</h2> 
-                        <p style='float:right; padding:10px'>
-                            Filtra:
-                            <select id="filter">
-                            </select>
-                        </p>
-                    </div>
+                    <h2>Opinioni degli utenti:</h2> 
+                    <p>
+                        Filtra:
+                        <select id="filter">
+                        </select>
+                    </p>
                     <table id="tableContainer">
                         <tr><th>Tratto</th><th>UserName</th><th>Opinione</th></tr>
                     </table>
@@ -176,7 +178,8 @@
             })
 
             document.getElementById("filter").addEventListener("change", function(){
-                filter_by(document.getElementsByClassName("righetta"), document.getElementById("filter").value)
+                filter_by(document.getElementsByClassName("righetta"), document.getElementsByClassName("cartina"), document.getElementById("filter").value)
+                showDivs(1)
             })
 
             window.onload = function(){

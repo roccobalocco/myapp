@@ -240,7 +240,7 @@ function load_data_gallery(datas, container){
   for(let i = 0; i < datas.length; i++){
     if(datas[i].opinione != ""){
       let d = document.createElement('div')
-      d.className = "reviewCard"
+      d.className = "reviewCard cartina toShow"
       let z = document.createElement('h2')
       z.textContent = datas[i].tratto
       let u = document.createElement('h2')
@@ -287,13 +287,20 @@ function load_data_no_zone(zona, datas, container){
   }
 }
 
-function filter_by(l, z){
+function filter_by(l, lc, z){
   for(let i = 0; i < l.length; i++){
-    if(l[i].firstChild.innerText  == z){
+    if(l[i].firstChild.innerText  == z || z == "tutto"){
       l[i].style = "display: default"
     }else{
       l[i].style = "display: none"
     }
+  }
+  for(let i = 0; i< lc.length; i++){
+    if(lc[i].firstChild.innerText  == z || z == "tutto"){
+      lc[i].className = "reviewCard cartina toShow"
+    }else{
+      lc[i].className = "reviewCard cartina notShow"
+    } 
   }
 }
 
@@ -313,9 +320,11 @@ function load_filter(datas, container){
     let opt = document.createElement('option')
     opt.value = e
     opt.innerText = e
-    if(e == "Ciclabile Valchiavenna"){
-      opt.defaultSelected = true
-    }
     container.appendChild(opt)
   });
+  let opt = document.createElement('option')
+  opt.value = "tutto";
+  opt.innerText = "Tutto"
+  opt.defaultSelected = true
+  container.appendChild(opt)
 }

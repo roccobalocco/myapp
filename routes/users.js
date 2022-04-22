@@ -23,10 +23,18 @@ router.get('/send_data', (req, res, next) => {
   myDb.insert(req.query.u, req.query.o, req.query.z);
   myDb.retrieve();
   
-  if(req.query.z == "Ciclabile Valchiavenna"){
-    res.redirect(`http://${ip.address()}:3000/piste`)
+  let firstPart = ""
+
+  if(req.url.contains("heroku")){
+    firstPart = "https://ciclabili-valchiavenna.herokuapp.com"
   }else{
-    res.redirect(`http://${ip.address()}:3000/zone?z=${req.query.z}`)
+    firstPart = `http://${ip.address()}:3000`
+  }
+  
+  if(req.query.z == "Ciclabile Valchiavenna"){
+    res.redirect(firstPart + `/piste`)
+  }else{
+    res.redirect(firstPart + `/zone?z=${req.query.z}`)
   }
   res.end()
 })

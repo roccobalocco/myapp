@@ -19,7 +19,7 @@ router.get('', (req, res, next) => {
 })
 
 router.get('/send_data', (req, res, next) => {
-  console.log("entrando in router /send_data con url pari a: " + req.originalUrl)
+  console.log("entrando in router /send_data con url originale pari a: " + req.originalUrl)
   myDb.insert(req.query.u, req.query.o, req.query.z);
   myDb.retrieve();
   

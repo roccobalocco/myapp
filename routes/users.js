@@ -23,14 +23,14 @@ router.get('/send_data', (req, res, next) => {
   myDb.insert(req.query.u, req.query.o, req.query.z);
   myDb.retrieve();
   
-  let firstPart = ""
+  var firstPart = ""
 
-  if(req.url.contains("heroku")){
+  if(req.url.includes("heroku")){
     firstPart = "https://ciclabili-valchiavenna.herokuapp.com"
   }else{
     firstPart = `http://${ip.address()}:3000`
   }
-  
+  console.log("PRIMA PARTE: " + firstPart)
   if(req.query.z == "Ciclabile Valchiavenna"){
     res.redirect(firstPart + `/piste`)
   }else{

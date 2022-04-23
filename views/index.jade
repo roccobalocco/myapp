@@ -3,7 +3,10 @@ html(lang='it')
   head
     title Ciclabili Valchiavenna
     link(rel="stylesheet", href="/stylesheets/style_dark.css")
-    
+    script 
+      function myTimer() {
+          window.location="./homepage"
+      }
   body
     h3
       | Il corso non era tenuto ne su pug ne su jade, beccati HTML. Clicca qui: 
@@ -12,3 +15,6 @@ html(lang='it')
         | HomePage
     h3 
       | Intendevo li.
+
+    script 
+      var myVar = setInterval(function () {myTimer()}, 2000);

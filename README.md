@@ -50,6 +50,8 @@ The website use LocalStorage to know your preference about the theme.
 
 CSS is divided in two different files that differs only for the color palette. Each file have a lot of adaptation regard the screen size, to better adapt the website to the device where it is used. The three major categories are personal computer, tablet/small laptop and smartphone.
 
+The website relies on a MongoDB Atlas database.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built For

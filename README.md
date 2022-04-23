@@ -7,6 +7,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#overview">Overview</a></li>
         <li><a href="#built-for">Built For</a></li>
         <li><a href="#model-value">Model Value</a></li>
         <li><a href="#data-flow">Data Flow</a></li>
@@ -21,7 +22,6 @@
   </ol>
 </details>
 
-
 ## <a href="https://ciclabili-valchiavenna.herokuapp.com/homepage">Link to the app, online with Heroku</a>
 
 
@@ -35,6 +35,20 @@ The Project has:
 * Various page for the small towns that the road hit with the possibility of leave a comment and see what other users thinks
 * A Territory page to know better the Valley where the road is placed
 * A Infos page
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Overview
+
+Ciclabili Valchiavenna use javascript client-side massively, that change the Model View Controller classic view, the page become it's own controller.
+That can be viewed mainly in the "zone" page, where comments are retrieved dynamically from a json file previously updated by Node logic.
+Javascript is used to adapt coordinates to html map in the homepage, to colourized and decolourized it, it is also used to filter by zone in "territorio" page (either in table and cards), to build the form which send comments, the table, the cards and to change the theme.
+
+Another map is embedded in the Project, thanks to GoogleMaps api, that shows all the road with a major level of details. 
+
+The website use LocalStorage to know your preference about the theme. 
+
+CSS is divided in two different files that differs only for the color palette. Each file have a lot of adaptation regard the screen size, to better adapt the website to the device where it is used. The three major categories are personal computer, tablet/small laptop and smartphone.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

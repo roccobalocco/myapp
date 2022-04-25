@@ -33,6 +33,11 @@ body {
     margin-bottom: 20px;
 }
 
+#limit{
+    overflow-y: auto;
+    max-height: 600px;
+}
+
 .image-container {
     text-align: center;
     margin-top: 20px;

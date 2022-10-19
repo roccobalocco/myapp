@@ -1,5 +1,10 @@
 <div id="top"></div>
 
+## ALERT
+
+Heroku is not avaible right now, to see the website online you have to wait until I find a new host service.
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>

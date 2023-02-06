@@ -27,7 +27,7 @@ router.get('/send_data', (req, res, next) => {
   var firstPart = ""
   
   if(!ip.address().includes("192.")){
-    firstPart = "https://ciclabili-valchiavenna.herokuapp.com"
+    firstPart = "https://ciclabili-valchiavenna.onrender.com"
   }else{
     firstPart = `http://${ip.address()}:3000`
   }
